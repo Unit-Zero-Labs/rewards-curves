@@ -1,6 +1,7 @@
 ## Brainstems Reward Curves
 
 stems_monthly_emissions_rates.ipynb provides high level details on STEMS token monthly emissions
+
 stems_node_reward_curve.ipynb provides more of the calculations behind individual node earnings, with simulations for different levels of reputation, utilization, and tokens staked
 
 Reward Curves and Emission Formulas
