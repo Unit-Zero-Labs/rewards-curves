@@ -7,10 +7,11 @@ Reward Curves and Emission Formulas
 
 ## Monthly Emission Rates
 The monthly emission rate is calculated based on the base annual emission, demand factor, and an offset.
+```
 NCM = max(min(demand_factor - offset, 1), -1)
 base_monthly_emission = base_annual_emission / 12
 monthly_emission = base_monthly_emission * (1 + NCM)
-
+```
 Where:
 - NCM is the Network Computation Multiplier
 - demand_factor is a factor that adjusts the base emission based on the total computational resources demanded from the network
@@ -22,8 +23,9 @@ Where:
 
 ## Node Earnings
 The earnings for an individual node are calculated using the following formula:
+```
 node_earnings = (M * (1 - U) * S) + (M * U * R)
-
+```
 Where:
 - M is the base emission for the network, which is a pool of available tokens to be distributed monthly
 - U is the network utilization rate, which reflects the proportion of nodes that are actively participating
@@ -33,9 +35,11 @@ Where:
 
 ## Reputation Score
 The reputation score for a node is calculated using the following formula:
+```
 active_ratio = days_deployed / total_days_in_month
 revenue_score = sum(contributed_revenue[i] / num_nodes[i]) for i in deployments
 reputation_score = active_ratio * revenue_score
+```
 
 Where:
 - days_deployed is the number of days the node was actively deployed in the month
